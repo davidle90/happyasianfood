@@ -1,48 +1,25 @@
-<header class="bg-white mb-5">
-    <nav class="flex justify-between items-center md:container mx-auto">
-        <div>
-            <img class="w-16 cursor-pointer" src="https://placehold.co/160x120?text=Hello+World" alt="">
-        </div>
-        <div class="nav-links md:static absolute bg-white md:min-h-fit min-h-[82vh] left-0 top-[-100%] md:w-auto w-full flex px-6">
-            <ul class="nav-ul flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+<nav class="bg-gray-100 mb-10">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <span class="self-center text-4xl font-normal">Happy Asian Food</span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-orange-100 rounded-lg md:hidden hover:bg-orange-100" aria-controls="navbar-default" aria-expanded="false">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
                 <li>
-                    <a class="hover:text-gray-500" href="#">Hem</a>
+                    <a href="#" class="navlink-text block py-2 px-3 md:border-0 md:p-0">Hem</a>
                 </li>
                 <li>
-                    <a class="hover:text-gray-500" href="#">CV</a>
+                    <a href="#" class="navlink-text block py-2 px-3 md:p-0">Meny</a>
                 </li>
                 <li>
-                    <a class="hover:text-gray-500" href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a class="hover:text-gray-500" href="#">Kontakt</a>
-                </li>
-                <li>
-                    <a class="hover:text-gray-500 md:hidden" href="#">Logga in</a>
+                    <a href="#" class="navlink-text block py-2 px-3 md:p-0">Info</a>
                 </li>
             </ul>
         </div>
-        <div class="flex items-center gap-6">
-            <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec] hidden md:block">Logga in</button>
-            <i class="bi bi-list text-3xl cursor-pointer md:hidden mx-5 onToggleMenu"></i>
-        </div>
-    </nav>
-</header>
-
-@push('scripts')
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.onToggleMenu').on('click', function () {
-                if($(this).hasClass('bi-list')) {
-                    $(this).removeClass('bi-list');
-                    $(this).addClass('bi-x-lg');
-                } else {
-                    $(this).removeClass('bi-x-lg');
-                    $(this).addClass('bi-list');
-                }
-                $('.nav-links').toggleClass('top-[6%]');
-                $('.nav-ul').toggleClass('my-5');
-            });
-        });
-    </script>
-@endpush
+    </div>
+</nav>

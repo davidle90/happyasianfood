@@ -10,7 +10,7 @@
     <div class="container mx-auto">
         <div class="w-4/5 mx-auto my-12 py-12">
             <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
-                Happy Asian Food
+                Happy Asian Food okay
             </h1>
             <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
                 This is a template for future projects - using Tailwind CSS, Fontawesome / Bootstrap Icons and DropzoneJS. Includes public and admin pages.

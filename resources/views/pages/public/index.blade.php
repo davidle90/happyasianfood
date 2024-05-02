@@ -45,7 +45,7 @@
 
         <h1 class="text-xl font-bold mt-10 mb-5 text-center">Huvudrätter</h1>
 
-        <div class="flex justify-between">
+        <div class="md:flex md:justify-between">
             <div>
                 <h1 class="text-xl font-bold mb-5">Soppa & Gryta</h1>
 
@@ -81,7 +81,7 @@
             </div>
 
             <div>
-                <h1 class="text-xl font-bold mb-5">Wokat</h1>
+                <h1 class="text-xl font-bold mb-5 mt-5 md:mt-0">Wokat</h1>
 
                 <div class="max-w-sm grid grid-cols-4 gap-4 mb-6">
                     <div class="col-span-3">

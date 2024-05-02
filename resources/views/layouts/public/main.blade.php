@@ -52,6 +52,10 @@
             text-underline-offset: 8px;
             transition: .2s all;
         }
+
+        .content-container {
+            width: 60%;
+        }
     </style>
 
     @yield('styles')

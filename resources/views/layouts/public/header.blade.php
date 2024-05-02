@@ -12,13 +12,13 @@
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
                 <li>
-                    <a href="#" class="navlink-text block py-2 px-3 md:border-0 md:p-0">Hem</a>
+                    <a href="{{ route('index') }}" class="navlink-text block py-2 px-3 md:border-0 md:p-0">Hem</a>
                 </li>
                 <li>
-                    <a href="#" class="navlink-text block py-2 px-3 md:p-0">Meny</a>
+                    <a href="#" class="navlink-text block py-2 px-3 md:p-0" id="scrollToMenu">Meny</a>
                 </li>
                 <li>
-                    <a href="#" class="navlink-text block py-2 px-3 md:p-0">Öppettider</a>
+                    <a href="#" class="navlink-text block py-2 px-3 md:p-0" id="scrollToOpenHours">Öppettider</a>
                 </li>
                 <li>
                     <span class="navlink-text cursor-pointer block py-2 px-3 md:p-0"><i class="bi bi-telephone"></i> 0451-12345</span>
@@ -28,5 +28,19 @@
     </div>
 </nav>
 
-@section('styles')
-@endsection
+@push('scripts')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#scrollToMenu').click(function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                window.location.href = "{{ route('index') }}#menu-section";
+            });
+            $('#scrollToOpenHours').click(function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                window.location.href = "{{ route('index') }}#open-hours-section";
+            });
+        });
+    </script>
+@endpush

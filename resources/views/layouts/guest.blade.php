@@ -46,6 +46,10 @@
             color: darkgoldenrod;
         }
 
+        .content-container {
+            width: 60%;
+        }
+
         .navlink-text:hover {
             color: gold;
             text-decoration: underline;

@@ -52,7 +52,9 @@
             text-underline-offset: 8px;
             transition: .2s all;
         }
-
+        .text-brand-color {
+            color: darkgoldenrod;
+        }
         .content-container {
             width: 60%;
         }

@@ -6,6 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="icon" href="{{ asset('/images/HappyAsianFood.png') }}"/>
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -40,20 +42,24 @@
 </head>
 
 <body class="font-[Poppins] min-h-screen flex flex-col justify-between">
-@yield('modals')
 
 @yield('modals')
 
 <!-- Main -->
-<main class="flex-grow">
+<main class="grow">
     <!-- Sidebar -->
-    @include('layouts.admin.sidebar')
+    @include('layouts.admin.navbar')
     <div class="sm:ml-64">
         <div class="p-5 bg-gray-100">
             @include('layouts.admin.header')
         </div>
-        <div class="p-5">
-            @yield('content')
+        <div class="flex">
+            <div class="w-52 p-5">
+                @yield('sidebar')
+            </div>
+            <div class="grow p-5">
+                @yield('content')
+            </div>
         </div>
     </div>
 </main>

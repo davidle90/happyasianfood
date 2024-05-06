@@ -54,9 +54,6 @@
             @include('layouts.admin.header')
         </div>
         <div class="flex">
-            <div class="w-52 p-5">
-                @yield('sidebar')
-            </div>
             <div class="grow p-5">
                 @yield('content')
             </div>

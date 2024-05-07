@@ -1,9 +1,31 @@
 <?php namespace App\Http\Controllers;
 
+use Davidle90\Restaurant\app\Models\Category;
+use Davidle90\Restaurant\app\Models\Meal;
+
 class PublicController extends Controller
 {
     public function index()
     {
-        return view('pages.public.index');
+        $meals = Meal::where('is_active', 1)->get();
+        $menus = [];
+
+        foreach($meals as $meal){
+
+            $sub_category = $meal->sub_category ?? '';
+
+            $menus[$meal->category->label][$sub_category][] = [
+                'title' =>  $meal->title ?? 'Untitled',
+                'description' => $meal->description ?? '',
+                'price' => $meal->price ?? 0,
+                'extras' => [
+                    'spice' => $meal->extras['spice'] ?? 0
+                ]
+            ];
+        }
+
+        return view('pages.public.index', [
+            'menus' => $menus
+        ]);
     }
 }

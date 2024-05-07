@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:davidle90/restaurant.git",
-                "reference": "b8077cb20135adab6e1d88b74ee85436ec5328ad"
+                "reference": "9b6dc6a2c2eeffce657115f7bfefbd8fa6de4f5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidle90/restaurant/zipball/b8077cb20135adab6e1d88b74ee85436ec5328ad",
-                "reference": "b8077cb20135adab6e1d88b74ee85436ec5328ad",
+                "url": "https://api.github.com/repos/davidle90/restaurant/zipball/9b6dc6a2c2eeffce657115f7bfefbd8fa6de4f5b",
+                "reference": "9b6dc6a2c2eeffce657115f7bfefbd8fa6de4f5b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -177,7 +177,7 @@
                 "source": "https://github.com/davidle90/restaurant/tree/master",
                 "issues": "https://github.com/davidle90/restaurant/issues"
             },
-            "time": "2024-05-05T12:05:03+00:00"
+            "time": "2024-05-07T20:56:40+00:00"
         },
         {
             "name": "davidle90/settings",
@@ -185,12 +185,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:davidle90/settings.git",
-                "reference": "6c5f96901be8ca7bf2bd8688c818fda38a8e1851"
+                "reference": "be8140f85f186f5b0847c8ad811e7fa0e1f03464"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidle90/settings/zipball/6c5f96901be8ca7bf2bd8688c818fda38a8e1851",
-                "reference": "6c5f96901be8ca7bf2bd8688c818fda38a8e1851",
+                "url": "https://api.github.com/repos/davidle90/settings/zipball/be8140f85f186f5b0847c8ad811e7fa0e1f03464",
+                "reference": "be8140f85f186f5b0847c8ad811e7fa0e1f03464",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -226,7 +226,7 @@
                 "source": "https://github.com/davidle90/settings/tree/master",
                 "issues": "https://github.com/davidle90/settings/issues"
             },
-            "time": "2024-05-03T23:19:11+00:00"
+            "time": "2024-05-05T12:53:49+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

@@ -22,105 +22,36 @@
 
 @section('content')
     <div class="flex items-center justify-center bg-fixed bg-parallax bg-cover h-96 haf-bg-img">
-        <h1 class="text-5xl font-bold haf-font">Happy Asian Food</h1>
     </div>
-    <div class="content-container mx-auto py-8">
-        <h1 id="menu-section" class="text-xl font-bold mb-5 text-center">Förrätter</h1>
-
-        <div>
-            <div class="font-semibold">F1 - Pha Pia </div>
-            <div class="mb-2">Thailändska vårrullar med sweetchilisås</div>
-            <ul class="max-w-md space-y-1 list-disc list-inside text-sm">
-                <li class="flex justify-between">
-                    <span class="li-item">Kycklingfärs (3st)</span><span class="text-red-600 font-bold">75 kr</span>
-                </li>
-                <li class="flex justify-between">
-                    <span class="li-item">Fläskfärs (3st)</span><span class="text-red-600 font-bold">75 kr</span>
-                </li>
-                <li class="flex justify-between">
-                    <span class="li-item">Vegetarisk (6st)</span><span class="text-red-600 font-bold">65 kr</span>
-                </li>
-                <li class="flex justify-between">
-                    <span class="li-item">Räkor (10st)</span><span class="text-red-600 font-bold">75 kr</span>
-                </li>
-            </ul>
-        </div>
-
-        <h1 class="text-xl font-bold mt-10 mb-5 text-center">Huvudrätter</h1>
-
-        <div class="md:flex md:justify-between">
-            <div class="mb-5 md:mb-5 md:mr-5">
-                <h1 class="text-xl font-bold mb-5">Soppa & Gryta</h1>
-
-                <div class="max-w-sm grid grid-cols-4 gap-4 mb-6">
-                    <div class="col-span-3">
-                        <h1 class="mb-2 font-semibold text-gray-900">11 - Tom Yum<span class="text-red-600 ml-2"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span></h1>
-                        <p class="mb-3 text-sm text-gray-700">Soppa med citron, limeblad, lök, svamp, tomat, salladlök, koriander</p>
-                        <ul class="max-w-md space-y-1 list-disc list-inside text-sm">
-                            <li>Kyckling</li>
-                            <li>Räkor</li>
-                            <li>Skaldjur</li>
-                        </ul>
-                    </div>
-                    <div class="col-span-1">
-                        <span class="text-red-600 font-bold">120 kr</span>
-                    </div>
-                </div>
-
-                <div class="max-w-sm grid grid-cols-4 gap-4">
-                    <div class="col-span-3">
-                        <h1 class="mb-2 font-semibold">11 - Tom Yum<span class="text-red-600 ml-2"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span></h1>
-                        <p class="mb-3 text-sm">Soppa med citron, limeblad, lök, svamp, tomat, salladlök, koriander</p>
-                        <ul class="max-w-md space-y-1 list-disc list-inside text-sm">
-                            <li>Kyckling</li>
-                            <li>Räkor</li>
-                            <li>Skaldjur</li>
-                        </ul>
-                    </div>
-                    <div class="col-span-1">
-                        <span class="text-red-600 font-bold">120 kr</span>
-                    </div>
-                </div>
+    <div id="menu-section" class="content-container mx-auto py-8 text-brand-color">
+        @foreach($menus as $main_category => $menu)
+            <h1 class="text-3xl font-bold mb-5 text-center">{{ $main_category }}</h1>
+            <div class="grid md:grid-cols-2 md:gap-8">
+                @foreach($menu as $sub_category => $meals)
+                        <div class="md:flex md:justify-between">
+                            <div class="mb-5 md:mb-0 md:mr-5">
+                                <h1 class="text-xl font-bold mb-5">{{ $sub_category }}</h1>
+                                @foreach($meals as $meal)
+                                    <div class="max-w-sm grid grid-cols-4 gap-4 mb-3">
+                                        <div class="col-span-3">
+                                            <h1 class="mb-2 font-semibold">
+                                                <span class="mr-2">{{ $meal['title'] }} </span> @for($i = 0; $i < $meal['extras']['spice']; $i++) <span class="text-red-600 text-sm"><i class="fa-solid fa-pepper-hot"></i></span> @endfor
+                                            </h1>
+                                            <p class="mb-3 text-sm text-gray-200">
+                                                {{ $meal['description'] }}
+                                            </p>
+                                        </div>
+                                        <div class="col-span-1">
+                                            <span class="font-bold">{{ $meal['price'] }} kr</span>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                @endforeach
             </div>
-
-            <div class="p-5">
-                <h1 class="text-xl font-bold mb-5 mt-5 md:mt-0">Wokat</h1>
-
-                <div class="max-w-sm grid grid-cols-4 gap-4 mb-6">
-                    <div class="col-span-3">
-                        <h1 class="mb-2 font-semibold text-gray-900">
-                            31 - Pad Ka Pow
-                            <span class="text-red-600 ml-2"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
-                        </h1>
-                        <p class="mb-3 text-sm text-gray-700">
-                            Wokad med chili, bambuskott, långbönor, lök, thaibasilika och paprika.
-                            <span class="block mt-2">Kyckling, Fläsk, Biff, Kycklingfärs, Fläskfärs, Nöttfärs, Räkor eller Skaldjur</span>
-                        </p>
-                    </div>
-                    <div class="col-span-1">
-                        <span class="text-red-600 font-bold">120 kr</span>
-                    </div>
-                </div>
-
-                <div class="max-w-sm grid grid-cols-4 gap-4 mb-6">
-                    <div class="col-span-3">
-                        <h1 class="mb-2 font-semibold text-gray-900">
-                            31 - Pad Ka Pow
-                            <span class="text-red-600 ml-2"><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i><i class="fa-solid fa-pepper-hot"></i></span>
-                        </h1>
-                        <p class="mb-3 text-sm text-gray-700">
-                            Wokad med chili, bambuskott, långbönor, lök, thaibasilika och paprika.
-                            <span class="block mt-2">Kyckling, Fläsk, Biff, Kycklingfärs, Fläskfärs, Nöttfärs, Räkor eller Skaldjur</span>
-                        </p>
-                    </div>
-                    <div class="col-span-1">
-                        <span class="text-red-600 font-bold">120 kr</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
-
 @endsection
 
 @section('scripts')

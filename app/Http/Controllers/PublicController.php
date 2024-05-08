@@ -11,25 +11,27 @@ class PublicController extends Controller
         $menu_display_settings = Settings::where('key', 'menu_display')->first();
         $menus = [];
 
-        if(isset($menu_display_settings) && !empty($menu_display_settings) && $menu_display_settings == 'show_db'){
+        if(isset($menu_display_settings)){
+            if($menu_display_settings->value == 'show_db'){
 
-            $meals = Meal::where('is_active', 1)->get();
+                $meals = Meal::where('is_active', 1)->get();
 
-            foreach($meals as $meal){
+                foreach($meals as $meal){
 
-                $sub_category = $meal->sub_category ?? '';
+                    $sub_category = $meal->sub_category ?? '';
 
-                $menus[$meal->category->sort_order.'_'.$meal->category->label][$sub_category][] = [
-                    'title' =>  $meal->title ?? 'Untitled',
-                    'description' => $meal->description ?? '',
-                    'price' => number_format($meal->price ?? 0, 0, '.', ' '),
-                    'extras' => [
-                        'spice' => $meal->extras['spice'] ?? 0
-                    ]
-                ];
+                    $menus[$meal->category->sort_order.'_'.$meal->category->label][$sub_category][] = [
+                        'title' =>  $meal->title ?? 'Untitled',
+                        'description' => $meal->description ?? '',
+                        'price' => number_format($meal->price ?? 0, 0, '.', ' '),
+                        'extras' => [
+                            'spice' => $meal->extras['spice'] ?? 0
+                        ]
+                    ];
+                }
+
+                ksort($menus);
             }
-
-            ksort($menus);
         }
 
         return view('pages.public.index', [

@@ -2,29 +2,35 @@
 
 use Davidle90\Restaurant\app\Models\Category;
 use Davidle90\Restaurant\app\Models\Meal;
+use Davidle90\Settings\app\Models\Settings;
 
 class PublicController extends Controller
 {
     public function index()
     {
-        $meals = Meal::where('is_active', 1)->get();
+        $menu_display_settings = Settings::where('key', 'menu_display')->first();
         $menus = [];
 
-        foreach($meals as $meal){
+        if(isset($menu_display_settings) && !empty($menu_display_settings) && $menu_display_settings == 'show_db'){
 
-            $sub_category = $meal->sub_category ?? '';
+            $meals = Meal::where('is_active', 1)->get();
 
-            $menus[$meal->category->sort_order.'_'.$meal->category->label][$sub_category][] = [
-                'title' =>  $meal->title ?? 'Untitled',
-                'description' => $meal->description ?? '',
-                'price' => number_format($meal->price ?? 0, 0, '.', ' '),
-                'extras' => [
-                    'spice' => $meal->extras['spice'] ?? 0
-                ]
-            ];
+            foreach($meals as $meal){
+
+                $sub_category = $meal->sub_category ?? '';
+
+                $menus[$meal->category->sort_order.'_'.$meal->category->label][$sub_category][] = [
+                    'title' =>  $meal->title ?? 'Untitled',
+                    'description' => $meal->description ?? '',
+                    'price' => number_format($meal->price ?? 0, 0, '.', ' '),
+                    'extras' => [
+                        'spice' => $meal->extras['spice'] ?? 0
+                    ]
+                ];
+            }
+
+            ksort($menus);
         }
-
-        ksort($menus);
 
         return view('pages.public.index', [
             'menus' => $menus

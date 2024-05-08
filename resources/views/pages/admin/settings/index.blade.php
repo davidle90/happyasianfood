@@ -17,6 +17,8 @@
     </li>
 @endsection
 
+
+
 @section('content')
     <div class="m-5">
         <h1 class="mb-5 font-bold">Inställningar</h2>

@@ -25,7 +25,13 @@
     </div>
     <div id="menu-section" class="content-container mx-auto py-8 text-brand-color">
         @foreach($menus as $main_category => $menu)
-            <h1 class="text-3xl font-bold mb-5 text-center">{{ $main_category }}</h1>
+
+            @php
+                $underscore_position = strpos($main_category, '_');
+                $display_main_category = $underscore_position !== false ? substr($main_category, $underscore_position + 1) : $main_category;
+            @endphp
+
+            <h1 class="text-3xl font-bold mb-5 text-center">{{ $display_main_category }}</h1>
             <div class="grid md:grid-cols-2 md:gap-8">
                 @foreach($menu as $sub_category => $meals)
                         <div class="md:flex md:justify-between">

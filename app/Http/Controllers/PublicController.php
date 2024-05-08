@@ -14,7 +14,7 @@ class PublicController extends Controller
 
             $sub_category = $meal->sub_category ?? '';
 
-            $menus[$meal->category->label][$sub_category][] = [
+            $menus[$meal->category->sort_order.'_'.$meal->category->label][$sub_category][] = [
                 'title' =>  $meal->title ?? 'Untitled',
                 'description' => $meal->description ?? '',
                 'price' => $meal->price ?? 0,
@@ -23,6 +23,8 @@ class PublicController extends Controller
                 ]
             ];
         }
+
+        ksort($menus);
 
         return view('pages.public.index', [
             'menus' => $menus

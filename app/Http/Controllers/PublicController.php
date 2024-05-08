@@ -17,7 +17,7 @@ class PublicController extends Controller
             $menus[$meal->category->sort_order.'_'.$meal->category->label][$sub_category][] = [
                 'title' =>  $meal->title ?? 'Untitled',
                 'description' => $meal->description ?? '',
-                'price' => $meal->price ?? 0,
+                'price' => number_format($meal->price ?? 0, 0, '.', ' '),
                 'extras' => [
                     'spice' => $meal->extras['spice'] ?? 0
                 ]

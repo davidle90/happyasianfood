@@ -1,5 +1,5 @@
 <footer class="py-4 bg-gray-900">
-    <div class="w-full mx-auto content-container text-white md:grid md:grid-cols-2 md:gap-4 py-4">
+    <div class="w-full mx-auto content-container text-gray-300 md:grid md:grid-cols-2 md:gap-4 py-4">
         <div class="mb-10 col-span-1">
             <h1 id="open-hours-section" class="font-bold mb-2">Öppettider</h1>
             <p>

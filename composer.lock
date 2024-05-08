@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:davidle90/restaurant.git",
-                "reference": "9b6dc6a2c2eeffce657115f7bfefbd8fa6de4f5b"
+                "reference": "b444653a86890ea6040331099fed63e251c18f36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidle90/restaurant/zipball/9b6dc6a2c2eeffce657115f7bfefbd8fa6de4f5b",
-                "reference": "9b6dc6a2c2eeffce657115f7bfefbd8fa6de4f5b",
+                "url": "https://api.github.com/repos/davidle90/restaurant/zipball/b444653a86890ea6040331099fed63e251c18f36",
+                "reference": "b444653a86890ea6040331099fed63e251c18f36",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -177,7 +177,7 @@
                 "source": "https://github.com/davidle90/restaurant/tree/master",
                 "issues": "https://github.com/davidle90/restaurant/issues"
             },
-            "time": "2024-05-07T20:56:40+00:00"
+            "time": "2024-05-07T23:54:27+00:00"
         },
         {
             "name": "davidle90/settings",

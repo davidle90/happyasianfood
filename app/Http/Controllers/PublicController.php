@@ -8,8 +8,17 @@ class PublicController extends Controller
 {
     public function index()
     {
-        $menu_display_settings = Settings::where('key', 'menu_display')->first();
+        $settings = Settings::get();
+        $menu_display_settings = $settings->where('key', 'menu_display')->first();
+
         $menus = [];
+
+        $contacts = [
+            'phone_number' => $settings->where('key', 'phone_number')->first(),
+            'business_hours' => $settings->where('key', 'business_hours')->first(),
+            'socials' => $settings->where('key', 'socials')->first(),
+            'email' => $settings->where('key', 'email')->first(),
+        ];
 
         if(isset($menu_display_settings)){
             if($menu_display_settings->value == 'show_db'){

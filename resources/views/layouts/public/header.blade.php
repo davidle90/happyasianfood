@@ -21,7 +21,7 @@
                     <a href="#" class="navlink-text block py-2 px-3 md:p-0" id="scrollToOpenHours">Öppettider</a>
                 </li>
                 <li>
-                    <span class="navlink-text cursor-pointer block py-2 px-3 md:p-0"><i class="bi bi-telephone"></i> 0451-12345</span>
+                    <a href="tel:{{ $info['phone_number']->value ?? '' }}" class="navlink-text block py-2 px-3 md:p-0"><i class="bi bi-telephone"></i> {{ $info['phone_number']->value ?? '' }}</a>
                 </li>
             </ul>
         </div>

@@ -185,12 +185,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:davidle90/settings.git",
-                "reference": "2335000a53727b077d08c1f5f72ed1c994b67347"
+                "reference": "48dcaa1659148d1d20c8beebc94f8e080d2de9d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davidle90/settings/zipball/2335000a53727b077d08c1f5f72ed1c994b67347",
-                "reference": "2335000a53727b077d08c1f5f72ed1c994b67347",
+                "url": "https://api.github.com/repos/davidle90/settings/zipball/48dcaa1659148d1d20c8beebc94f8e080d2de9d1",
+                "reference": "48dcaa1659148d1d20c8beebc94f8e080d2de9d1",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -226,7 +226,7 @@
                 "source": "https://github.com/davidle90/settings/tree/master",
                 "issues": "https://github.com/davidle90/settings/issues"
             },
-            "time": "2024-05-08T15:52:06+00:00"
+            "time": "2024-05-10T14:56:16+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

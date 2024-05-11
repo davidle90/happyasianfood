@@ -2,22 +2,42 @@
     <div class="w-full mx-auto content-container text-gray-300 md:grid md:grid-cols-2 md:gap-4 py-4">
         <div class="mb-10 col-span-1">
             <h1 id="open-hours-section" class="font-bold mb-2">Öppettider</h1>
-            <p>
-                Måndag: Stängt
-                <br>
-                Tisdag - Torsdag: 11.30 - 21.00
-                <br>
-                Fredag: 11.30 - 22.00
-                <br>
-                Lördag: 12.00 - 22.00
-                <br>
-                Söndag & helgdagar: 13.00 - 21.00
-            </p>
+            <div class="md:flex justify-start">
+                <p class="mr-5">
+                    Måndag: {{ $info['monday']->value ?? 'Stängt' }}
+                    <br>
+                    Tisdag: {{ $info['tuesday']->value ?? 'Stängt' }}
+                    <br>
+                    Onsdag: {{ $info['wednesday']->value ?? 'Stängt' }}
+                    <br>
+                    Torsday: {{ $info['thursday']->value ?? 'Stängt' }}
+                    <br>
+                    Fredag: {{ $info['friday']->value ?? 'Stängt' }}
+                </p>
+                <p>
+                    Lördag: {{ $info['saturday']->value ?? 'Stängt' }}
+                    <br>
+                    Söndag: {{ $info['sunday']->value ?? 'Stängt' }}
+                    <br>
+                    Helgdagar: {{ $info['holidays']->value ?? 'Stängt' }}
+                </p>
+            </div>
+
         </div>
         <div class="mb-10 col-span-1">
-            <h1 id="open-hours-section" class="font-bold mb-2">Adress</h1>
+            <h1 class="font-bold mb-2">Adress</h1>
             <p>
-                Restaurangvägen 24
+                {{ $info['adress']->value ?? '' }}
+                <br>
+                {{ $info['zip_code']->value ?? '' }} {{ $info['city']->value ?? '' }}
+                <br>
+            </p>
+            <br>
+            <h1 class="font-bold mb-2">Kontakt</h1>
+            <p>
+                Telefon: {{ $info['phone_number']->value ?? '' }}
+                <br>
+                E-port: {{ $info['email']->value ?? '' }}
             </p>
         </div>
     </div>

@@ -33,12 +33,12 @@
 
     <style>
         .haf-font {
-            font-family: 'Handlee', cursive;
+            font-family: 'Merienda', cursive;
             color: darkgoldenrod;
         }
 
         .font-brand {
-            font-family: 'Handlee', cursive;
+            font-family: 'Merienda', cursive;
         }
 
         .bg-black {
@@ -79,7 +79,14 @@
 @yield('modals')
 
 <!-- Header -->
-@include('layouts.public.header')
+<nav class="bg-black">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img class="h-8" src="{{ asset('/images/HappyAsianFood.png') }}" alt="happyasianfood">
+            <span class="haf-font self-center text-2xl font-normal">{{ config('app.name', 'Laravel') }}</span>
+        </a>
+    </div>
+</nav>
 
 <!-- Main -->
 <main class="flex items-center justify-center m-auto grow">
@@ -89,7 +96,26 @@
 </main>
 
 <!-- Footer -->
-@include('layouts.public.footer')
+<footer class="py-4 bg-gray-900">
+    <div class="w-full mx-auto content-container md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">{{ config('app.name', 'Laravel') }}™</a>. All Rights Reserved.</span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">About</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 

@@ -33,12 +33,12 @@
 
     <style>
         .haf-font {
-            font-family: 'Merienda', sans-serif;
+            font-family: 'Handlee', cursive;
             color: darkgoldenrod;
         }
 
         .font-brand {
-            font-family: 'Merienda', cursive;
+            font-family: 'Handlee', cursive;
         }
 
         .bg-black {

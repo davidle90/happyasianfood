@@ -41,7 +41,7 @@
     @stack('styles')
 </head>
 
-<body class="font-[Poppins] min-h-screen flex flex-col justify-between">
+<body class="min-h-screen flex flex-col justify-between">
 
 @yield('modals')
 

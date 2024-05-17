@@ -10,7 +10,7 @@
                     <br>
                     Onsdag: {{ $info['wednesday']->value ?? 'Stängt' }}
                     <br>
-                    Torsday: {{ $info['thursday']->value ?? 'Stängt' }}
+                    Torsdag: {{ $info['thursday']->value ?? 'Stängt' }}
                     <br>
                     Fredag: {{ $info['friday']->value ?? 'Stängt' }}
                 </p>

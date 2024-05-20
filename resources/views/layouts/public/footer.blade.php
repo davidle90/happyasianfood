@@ -37,7 +37,7 @@
             <p>
                 Telefon: {{ $info['phone_number']->value ?? '' }}
                 <br>
-                E-port: {{ $info['email']->value ?? '' }}
+                E-post: {{ $info['email']->value ?? '' }}
             </p>
         </div>
     </div>

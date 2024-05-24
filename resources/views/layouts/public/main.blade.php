@@ -43,6 +43,10 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        .font-brand {
+            font-family: 'Merienda', cursive;
+        }
+
         .bg-black {
             --tw-bg-opacity: 1;
             background-color: rgba(0, 0, 0, var(--tw-bg-opacity));

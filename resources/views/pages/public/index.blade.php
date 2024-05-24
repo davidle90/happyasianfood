@@ -70,7 +70,7 @@
                     <br>
                     Det kommer att bjudas på smårätter från asiens alla länder samt dryck.
                     <br>
-                    Vi hoppas på att ni vill komma och vara med på vår resa mot matglädle och gemenskap.
+                    Vi hoppas på att ni vill komma och vara med på vår resa mot matglädje och gemenskap.
                 </span>
             </p>
         </figcaption>

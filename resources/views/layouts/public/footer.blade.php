@@ -55,7 +55,7 @@
                 <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
             </li>
             <li>
-                <a href="#" class="hover:underline">Contact</a>
+                <a href="{{ route('admin.index')}}" class="hover:underline">Admin</a>
             </li>
         </ul>
     </div>

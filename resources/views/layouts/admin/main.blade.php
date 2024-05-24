@@ -37,6 +37,14 @@
     <!-- Dropzone JS -->
     <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 
+    <!-- TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/{{ config('services.tinymce.key') }}/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+    </script>
+
     @yield('styles')
     @stack('styles')
 </head>

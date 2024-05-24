@@ -10,4 +10,14 @@ class AdminController extends Controller
 
         ]);
     }
+
+    public function editMessage()
+    {
+
+    }
+
+    public function storeMessage()
+    {
+
+    }
 }

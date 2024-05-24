@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Davidle90\Settings\app\Models\Settings;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

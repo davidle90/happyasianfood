@@ -6,6 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="icon" href="{{ asset('/images/HappyAsianFood.png') }}"/>
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -23,6 +25,9 @@
     <!-- Dropzone CSS -->
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
 
+    <!-- Flowbite JS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
     <!-- Scripts -->
 {{--    @ vite(['resources/css/app.css', 'resources/js/app.js'])--}}
 
@@ -32,28 +37,39 @@
     <!-- Dropzone JS -->
     <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 
+    <!-- TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/{{ config('services.tinymce.key') }}/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+    </script>
+
     @yield('styles')
     @stack('styles')
 </head>
 
-<body class="font-[Poppins] min-h-screen flex flex-col justify-between">
-@yield('modals')
+<body class="min-h-screen flex flex-col justify-between">
 
 @yield('modals')
 
 <!-- Main -->
-<main class="flex-grow">
+<main class="grow">
     <!-- Sidebar -->
-    @include('layouts.admin.sidebar')
+    @include('layouts.admin.navbar')
     <div class="sm:ml-64">
         <div class="p-5 bg-gray-100">
             @include('layouts.admin.header')
         </div>
-        <div class="p-5">
-            @yield('content')
+        <div class="flex">
+            <div class="grow p-5">
+                @yield('content')
+            </div>
         </div>
     </div>
 </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
 @yield('scripts')
 @stack('scripts')

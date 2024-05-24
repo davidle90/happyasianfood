@@ -12,6 +12,12 @@
 @section('content')
     <div>
         admin dashboard
+    <!--
+        <h1>TinyMCE Quick Start Guide</h1>
+        <form method="post">
+        <textarea id="mytextarea">Hello, World!</textarea>
+        </form>
+    -->
     </div>
 @endsection
 

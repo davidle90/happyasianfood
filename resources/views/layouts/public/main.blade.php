@@ -39,8 +39,8 @@
             color: darkgoldenrod;
         }
 
-        .font-brand {
-            font-family: 'Merienda', cursive;
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
         }
 
         .bg-black {

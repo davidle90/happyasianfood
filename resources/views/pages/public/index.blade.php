@@ -52,23 +52,40 @@
 @endsection
 
 @section('content')
-    <div class="container mx-auto">
-        <div class="w-4/5 mx-auto my-12 py-12">
-            <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
-                Happy Asian Food
-            </h1>
-            <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
-                This is a template for future projects - using Tailwind CSS, Fontawesome / Bootstrap Icons and DropzoneJS. Includes public and admin pages.
+
+    <figure class="relative custom-figure">
+        <img class="custom-image" src="{{ asset('/images/haf-hero.jpg') }}" alt="hero">
+        <figcaption class="absolute custom-caption text-brand-color md:text-lg font-poppins">
+            <p class="border-brand p-6 custom-text-bg">
+                <span class="font-bold text-xl">Välkommen på öppet hus</span>
+                <br>
+                <span class="text-sm">
+                    29 juni 13.00 - 15.00
+                </span>
+                <br>
+                <span>
+                    Nu öppnar vi restaurangen på nytt vid Ginstgatan 3, 254 75 Ödåkra.
+                    <br>
+                    Välkomna in på öppet hus där ni får smaka och ta del av restaurangens nya mat och koncept.
+                    <br>
+                    Det kommer att bjudas på smårätter från asiens alla länder samt dryck.
+                    <br>
+                    Vi hoppas på att ni vill komma och vara med på vår resa mot matglädje och gemenskap.
+                </span>
             </p>
-            <div class="text-center">
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                    Learn more
-                    <i class="fa-solid fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
+        </figcaption>
+    </figure>
+
+    <div id="menu-section" class="content-container mx-auto py-8 text-brand-color">
+        @if(!isset($menus) || empty($menus))
+            @include('pages.public.includes.menu_from_images')
+        @else
+            @include('pages.public.includes.menu_from_db', ['menus' => $menus])
+        @endif
+    </div>
+    <div class="flex justify-center items-center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d935.4426356608444!2d12.747932542892789!3d56.10746663900431!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46522da3ab1a17eb%3A0xa536c23629936c83!2sGinstgatan%203%2C%20254%2075%20%C3%96d%C3%A5kra!5e0!3m2!1ssv!2sse!4v1716585851580!5m2!1ssv!2sse" class="w-full h-96" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 @endsection
-
 @section('scripts')
 @endsection

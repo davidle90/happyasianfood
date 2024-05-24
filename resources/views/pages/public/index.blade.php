@@ -84,6 +84,5 @@
         @endif
     </div>
 @endsection
-
 @section('scripts')
 @endsection

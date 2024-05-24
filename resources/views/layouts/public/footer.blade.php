@@ -22,7 +22,7 @@
                     Helgdagar: {{ $info['holidays']->value ?? 'Stängt' }}
                 </p>
             </div>
-
+    
         </div>
         <div class="mb-10 col-span-1">
             <h1 class="font-bold mb-2">Adress</h1>
@@ -41,7 +41,6 @@
             </p>
         </div>
     </div>
-
     <div class="w-full mx-auto content-container md:flex md:items-center md:justify-between">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">{{ config('app.name', 'Laravel') }}™</a>. All Rights Reserved.</span>
         <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">

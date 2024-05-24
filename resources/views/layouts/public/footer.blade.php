@@ -22,7 +22,7 @@
                     Helgdagar: {{ $info['holidays']->value ?? 'Stängt' }}
                 </p>
             </div>
-
+    
         </div>
         <div class="mb-10 col-span-1">
             <h1 class="font-bold mb-2">Adress</h1>

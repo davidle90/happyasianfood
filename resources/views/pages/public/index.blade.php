@@ -64,7 +64,7 @@
                 </span>
                 <br>
                 <span>
-                    Nu öppnar vi restaurangen på nytt vid Ginstgatan 3, Helsingborg.
+                    Nu öppnar vi restaurangen på nytt vid Ginstgatan 3, 254 75 Ödåkra.
                     <br>
                     Välkomna in på öppet hus där ni får smaka och ta del av restaurangens nya mat och koncept.
                     <br>

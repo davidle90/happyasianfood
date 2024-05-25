@@ -26,11 +26,23 @@
             $('.main-menu-link').on('click', function() {
                 $('#take-away-menu').addClass('hidden');
                 $('#main-menu').removeClass('hidden');
+                $('html,body').animate(
+                    {
+                        scrollTop: $("#main-menu").offset().top
+                    },
+                    'slow'
+                );
             })
 
             $('.take-away-menu-link').on('click', function() {
                 $('#main-menu').addClass('hidden');
                 $('#take-away-menu').removeClass('hidden');
+                $('html,body').animate(
+                    {
+                        scrollTop: $("#take-away-menu").offset().top
+                    },
+                    'slow'
+                );
             })
         })
     </script>

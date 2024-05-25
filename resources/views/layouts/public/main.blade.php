@@ -74,7 +74,35 @@
             .content-container {
                 width: 80%;
             }
+            #backToTopBtn {
+            padding: 10px; /* Reduce padding */
+            font-size: 14px; /* Reduce font size */
+            bottom: 15px; /* Adjust position */
+            right: 20px; /* Adjust position */
         }
+        }
+
+        /* Back to top button */
+        #backToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: darkgoldenrod; /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+        }
+
+        #backToTopBtn:hover {
+            background-color: gold; /* Add a dark-grey background on hover */
+        }
+
     </style>
 
     @yield('styles')
@@ -97,10 +125,35 @@
 <!-- Footer -->
 @include('layouts.public.footer')
 
+<!-- Back to top button -->
+<button id="backToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
 @yield('scripts')
 @stack('scripts')
+
+<script>
+    $(document).ready(function() {
+        // Show or hide the button based on scroll position
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('#backToTopBtn').fadeIn();
+            } else {
+                $('#backToTopBtn').fadeOut();
+            }
+        });
+
+        // Scroll to the top when the button is clicked
+        $('#backToTopBtn').click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 500);
+            return false;
+        });
+    });
+</script>
 
 </body>
 </html>

@@ -12,13 +12,13 @@
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
                 <li>
-                    <a href="{{ route('index') }}" class="navlink-text block py-2 px-3 md:border-0 md:p-0">Hem</a>
-                </li>
-                <li>
                     <a href="#menu" class="navlink-text block py-2 px-3 md:p-0" id="scrollToMenu">Meny</a>
                 </li>
                 <li>
                     <a href="#open-hours" class="navlink-text block py-2 px-3 md:p-0" id="scrollToOpenHours">Öppettider</a>
+                </li>
+                <li>
+                    <a href="#location" class="navlink-text block py-2 px-3 md:p-0" id="scrollToLocation">Hitta hit</a>
                 </li>
                 <li>
                     <a href="tel:{{ $info['phone_number']->value ?? '' }}" class="navlink-text block py-2 px-3 md:p-0"><i class="bi bi-telephone"></i> {{ $info['phone_number']->value ?? '' }}</a>
@@ -43,6 +43,13 @@
 
                 $('html, body').animate({
                 scrollTop: $("#open-hours-section").offset().top
+            }, 500);
+            });
+            $('#scrollToLocation').click(function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+
+                $('html, body').animate({
+                scrollTop: $("#location-section").offset().top
             }, 500);
             });
         });

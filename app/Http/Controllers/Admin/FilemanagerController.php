@@ -2,11 +2,11 @@
 
 use App\Http\Controllers\Controller;
 
-class AdminController extends Controller
+class FilemanagerController extends Controller
 {
     public function index()
     {
-        return view('pages.admin.index', [
+        return view('pages.admin.filemanager.index', [
 
         ]);
     }

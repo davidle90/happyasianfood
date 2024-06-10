@@ -95,7 +95,6 @@
             color: white; /* Text color */
             cursor: pointer; /* Add a mouse pointer on hover */
             padding: 15px; /* Some padding */
-            border-radius: 10px; /* Rounded corners */
             font-size: 18px; /* Increase font size */
         }
 

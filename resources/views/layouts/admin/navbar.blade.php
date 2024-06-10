@@ -28,6 +28,11 @@
                 </a>
             </li>
             <li>
+                <a href="{{ route('admin.filemanager.index') }}" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                    <span class="whitespace-nowrap"><i class="fa-solid fa-folder mr-2"></i>Filemanager</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{ route('admin.settings.index')}}" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
                     <span class="whitespace-nowrap"><i class="fa-solid fa-gear mr-2"></i>Inställningar</span>
                 </a>

@@ -60,7 +60,7 @@
                 <span class="font-bold text-xl">Välkommen på öppet hus</span>
                 <br>
                 <span>
-                    29 juni 12.00 - 14.00
+                    29 juni 12.00 - 14.01
                 </span>
                 <br><br>
                 <span>

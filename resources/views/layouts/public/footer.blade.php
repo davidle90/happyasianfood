@@ -22,7 +22,7 @@
                     Helgdagar: {{ $info['holidays']->value ?? 'Stängt' }}
                 </p>
             </div>
-    
+
         </div>
         <div class="mb-10 col-span-1">
             <h1 class="font-bold mb-2">Adress</h1>
@@ -36,15 +36,17 @@
             <h1 class="font-bold mb-2">Kontakt</h1>
             <p>
                 Telefon: {{ $info['phone_number']->value ?? '' }}
+                @if(isset($info['email']->value) && !empty($info['email']->value))
                 <br>
-                E-post: {{ $info['email']->value ?? '' }}
+                    E-post: {{ $info['email']->value ?? '' }}
+                @endif
             </p>
         </div>
     </div>
     <div class="w-full mx-auto content-container md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">{{ config('app.name', 'Laravel') }}™</a>. All Rights Reserved.</span>
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">{{ config('app.name', 'Laravel') }}</a></span>
         <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-            <li>
+            {{-- <li>
                 <a href="#" class="hover:underline me-4 md:me-6">About</a>
             </li>
             <li>
@@ -52,10 +54,10 @@
             </li>
             <li>
                 <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-            </li>
-            <li>
+            </li> --}}
+            {{-- <li>
                 <a href="{{ route('admin.index')}}" class="hover:underline">Admin</a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </footer>

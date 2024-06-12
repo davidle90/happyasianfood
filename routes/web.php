@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\Admin\AdminController;
-
+use App\Http\Controllers\Admin\FilemanagerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +26,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
 
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/admin/filemanager', [FilemanagerController::class, 'index'])->name('admin.filemanager.index');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

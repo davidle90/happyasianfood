@@ -32,13 +32,14 @@ class PublicController extends Controller
         if(isset($menu_display_settings)){
             if($menu_display_settings->value == 'show_db'){
 
-                $meals = Meal::where('is_active', 1)->get();
+                $meals = Meal::where('is_active', 1)->orderByRaw('CAST(menu_number AS UNSIGNED)')->get();
 
                 foreach($meals as $meal){
 
                     $sub_category = $meal->sub_category ?? '';
 
                     $menus[$meal->category->sort_order.'_'.$meal->category->label][$sub_category][] = [
+                        'menu_number' => $meal->menu_number ?? '',
                         'title' =>  $meal->title ?? 'Untitled',
                         'description' => $meal->description ?? '',
                         'price' => number_format($meal->price ?? 0, 0, '.', ' '),

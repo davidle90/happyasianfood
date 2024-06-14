@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9449c8b919c1205a2f36249692c76b02",
+    "content-hash": "8aab29b9aa1e87bb8d57f08736f53291",
     "packages": [
         {
             "name": "brick/math",
@@ -133,22 +133,10 @@
         {
             "name": "davidle90/restaurant",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:davidle90/restaurant.git",
-                "reference": "69599302cafe72057500920f7ae70e94819d893c"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/davidle90/restaurant/zipball/69599302cafe72057500920f7ae70e94819d893c",
-                "reference": "69599302cafe72057500920f7ae70e94819d893c",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://davidle90.repo.repman.io/dists/%package%/%version%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "type": "path",
+                "url": "../packages/davidle90/restaurant",
+                "reference": "3fb8d18c6a0f5e523835013f37fa4f544c013928"
             },
             "type": "package",
             "extra": {
@@ -163,7 +151,6 @@
                     "Davidle90\\Restaurant\\": "src/"
                 }
             },
-            "notification-url": "https://davidle90.repo.repman.io/downloads",
             "license": [
                 "MIT"
             ],
@@ -173,31 +160,18 @@
                 }
             ],
             "description": "restaurant menu package",
-            "support": {
-                "source": "https://github.com/davidle90/restaurant/tree/master",
-                "issues": "https://github.com/davidle90/restaurant/issues"
-            },
-            "time": "2024-05-10T08:28:58+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "davidle90/settings",
             "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:davidle90/settings.git",
-                "reference": "72017c678bc754ff1fa86319b39b014fbb9812a9"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/davidle90/settings/zipball/72017c678bc754ff1fa86319b39b014fbb9812a9",
-                "reference": "72017c678bc754ff1fa86319b39b014fbb9812a9",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://davidle90.repo.repman.io/dists/%package%/%version%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "type": "path",
+                "url": "../packages/davidle90/settings",
+                "reference": "72017c678bc754ff1fa86319b39b014fbb9812a9"
             },
             "type": "package",
             "extra": {
@@ -212,7 +186,6 @@
                     "Davidle90\\Settings\\": "src/"
                 }
             },
-            "notification-url": "https://davidle90.repo.repman.io/downloads",
             "license": [
                 "MIT"
             ],
@@ -222,11 +195,10 @@
                 }
             ],
             "description": "site settings package",
-            "support": {
-                "source": "https://github.com/davidle90/settings/tree/master",
-                "issues": "https://github.com/davidle90/settings/issues"
-            },
-            "time": "2024-06-10T12:19:36+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "dflydev/dot-access-data",

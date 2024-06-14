@@ -23,7 +23,8 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://kit.fontawesome.com/0c64e32fd9.js" crossorigin="anonymous"></script>
-
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Flowbite JS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 
@@ -100,6 +101,14 @@
 
         #backToTopBtn:hover {
             background-color: gold; /* Add a dark-grey background on hover */
+        }
+        .order-button {
+            background-color: darkgoldenrod;
+            color : white;
+        }
+        .order-button:hover {
+            background-color: #a57809;
+            color : white;
         }
 
     </style>

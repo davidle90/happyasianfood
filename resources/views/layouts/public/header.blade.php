@@ -15,6 +15,9 @@
                     <a href="#menu" class="navlink-text block py-2 px-3 md:p-0" id="scrollToMenu">Meny</a>
                 </li>
                 <li>
+                    <a href="https://order.trueorder.se/happyasianfood/store1" class="navlink-text block py-2 px-3 md:p-0">Beställ online</a>
+                </li>
+                <li>
                     <a href="#open-hours" class="navlink-text block py-2 px-3 md:p-0" id="scrollToOpenHours">Öppettider</a>
                 </li>
                 <li>

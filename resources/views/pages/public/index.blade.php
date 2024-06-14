@@ -45,6 +45,10 @@
             background-color: rgba(0, 0, 0, 0.84); /* Black background with 60% opacity */
             padding: 1rem; /* Padding around the text */
         }
+        .section-gap {
+            padding-top: 12rem;
+            padding-bottom: 12rem;
+        }
     </style>
 @endsection
 
@@ -52,7 +56,11 @@
 @endsection
 
 @section('content')
-
+<!-- <div class="bg-cover bg-fixed bg-center bg-no-repeat" style="background-image: url('{{ asset('/images/haf-hero.jpg') }}');">
+        <div class="section-gap">
+        </div>
+<div> CONTENT </div>
+</div>  -->
     <figure class="relative custom-figure">
         <img class="custom-image" src="{{ asset('/images/haf-hero.jpg') }}" alt="hero">
         <figcaption class="absolute custom-caption text-brand-color md:text-lg font-poppins">
@@ -77,9 +85,9 @@
     </figure>
 
     <div id="menu-section" class="content-container mx-auto py-8 text-brand-color">
-        {{-- <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-brand-color rounded-lg border border-brand">Meny</button>
-        <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-brand-color rounded-lg border border-brand">Beställ online</button> --}}
-
+        <div class="flex justify-center items-center gap-4 mb-6">
+            <a href="https://order.trueorder.se/happyasianfood/store1" class="order-button rounded-lg p-4">Beställ online</a>
+        </div>
         @if(!isset($menus) || empty($menus))
             @include('pages.public.includes.menu_from_images')
         @else

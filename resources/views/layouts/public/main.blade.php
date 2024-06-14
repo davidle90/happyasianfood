@@ -104,6 +104,14 @@
         #backToTopBtn:hover {
             background-color: gold; /* Add a dark-grey background on hover */
         }
+        .order-button {
+            background-color: darkgoldenrod;
+            color : white;
+        }
+        .order-button:hover {
+            background-color: #a57809;
+            color : white;
+        }
 
     </style>
 

@@ -52,20 +52,7 @@
         ]
     },
     "repositories": [
-        {
-            "type":"path",
-            "url":"../packages/davidle90/settings",
-            "options":{
-                "symlink":true
-            }
-        },
-        {
-            "type":"path",
-            "url":"../packages/davidle90/restaurant",
-            "options":{
-                "symlink":true
-            }
-        }
+        {"type": "composer", "url": "https://davidle90.repo.repman.io"}
     ],
     "extra": {
         "laravel": {

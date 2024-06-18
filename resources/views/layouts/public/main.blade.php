@@ -73,7 +73,7 @@
 
         @media only screen and (max-width: 768px) {
             .content-container {
-                width: 80%;
+                width: 95%;
             }
             #backToTopBtn {
             padding: 10px; /* Reduce padding */

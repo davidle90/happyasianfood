@@ -7,6 +7,10 @@
 
     <h1 class="text-3xl font-bold mb-5 text-center">{{ $display_main_category }}</h1>
     <div class="border-brand mb-8">
+    <p class="text-center text-lg font-bold my-5">
+        Priser: För take-away / Äta här<br>
+        Tofu, Grönsaker 110/125 | Kyckling 120/135 | Fläsk 120/135 | Biff 130/145 | Räkor 140/155 | Skaldjur 150/165
+    </p>
     <div class="grid md:grid-cols-2 md:gap-6">
         @foreach($menu as $sub_category => $meals)
             <div class="flex justify-center md:justify-between">
@@ -30,7 +34,7 @@
                             </p>
                         </div>
                         <div class="col-span-1 flex justify-end">
-                            <span class="font-bold">{{ $meal['price'] }} kr</span>
+                            <span class="font-bold">Från {{ $meal['price'] }} kr</span>
                         </div>
                     </div>
                     @endforeach

@@ -29,6 +29,7 @@ class PublicController extends Controller
             'email' => $settings->where('key', 'email')->first(),
         ];
 
+        $menus = [];
         if(isset($menu_display_settings)){
             if($menu_display_settings->value == 'show_db'){
 
@@ -36,9 +37,8 @@ class PublicController extends Controller
 
                 foreach($meals as $meal){
 
-                    $sub_category = $meal->sub_category ?? '';
-
-                    $menus[$meal->category->sort_order.'_'.$meal->category->label][$sub_category][] = [
+                    $menus[$meal->category->sortorder . '' . $meal->category->label][$meal->sub_category->label ?? ""]['description'] = $meal->sub_category->description ?? "";
+                    $menus[$meal->category->sortorder . '' . $meal->category->label][$meal->sub_category->label ?? ""]['meals'][] = [
                         'menu_number' => $meal->menu_number ?? '',
                         'title' =>  $meal->title ?? 'Untitled',
                         'description' => $meal->description ?? '',

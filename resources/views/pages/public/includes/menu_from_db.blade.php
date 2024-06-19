@@ -28,7 +28,7 @@
                         <div class="grid grid-cols-4 gap-4">
                             <div class="col-span-3">
                                 <h1 class="mb-2 font-semibold">
-                                    <span class="mr-2">{{ $meal['menu_number'] ? $meal['menu_number'] . '. ' : '' }}{{ $meal['title'] }}</span> 
+                                    <span class="mr-2">{{ $meal['menu_number'] ? $meal['menu_number'] . '. ' : '' }}{{ $meal['title'] }}</span>
                                     <span class="text-red-600 text-sm">
                                         @for($i = 0; $i < $meal['extras']['spice']; $i++)
                                             <i class="fa-solid fa-pepper-hot"></i>
@@ -40,11 +40,11 @@
                                 </p>
                             </div>
                                 <div class="col-span-1 flex justify-end">
-                                    @if(!empty($meal['price']))
+                                    {{-- @if(!empty($meal['price']))
                                         <span class="font-bold">{{ $meal['price'] }} kr</span>
                                     @else
                                         <span class="font-bold">&nbsp;</span>
-                                    @endif
+                                    @endif --}}
                                 </div>
                         </div>
                         @endforeach

@@ -63,7 +63,7 @@
 </div>  -->
     <figure class="relative custom-figure">
         <img class="custom-image" src="{{ asset('/images/haf-hero.jpg') }}" alt="hero">
-        <figcaption class="absolute custom-caption text-brand-color md:text-lg font-poppins">
+        {{-- <figcaption class="absolute custom-caption text-brand-color md:text-lg font-poppins">
             <div class="border-brand p-6 custom-text-bg">
                 <span class="font-bold text-xl">Välkommen på öppet hus</span>
                 <br>
@@ -81,7 +81,7 @@
                     Vi hoppas på att ni vill komma och vara med på vår resa mot matglädje och gemenskap.
                 </span>
             </div>
-        </figcaption>
+        </figcaption> --}}
     </figure>
 
     <div id="menu-section" class="content-container mx-auto py-8 text-brand-color">

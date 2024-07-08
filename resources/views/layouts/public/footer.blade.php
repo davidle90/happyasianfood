@@ -22,7 +22,7 @@
                     Helgdagar: {{ $info['holidays']->value ?? 'Stängt' }}
                 </p>
             </div>
-    
+
         </div>
         <div class="mb-10 col-span-1">
             <h1 class="font-bold mb-2">Adress</h1>
@@ -44,9 +44,18 @@
         </div>
     </div>
 
+    <div class="mx-auto content-container text-gray-300 mb-10">
+        <h1 class="font-bold mb-2">Följ oss:</h1>
+        <div class="md:flex justify-start space-x-4">
+            <a href="https://www.facebook.com/profile.php?id=61558980699686" target="_blank" aria-label="Facebook" class="hover:text-white text-2xl"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/happyasianfood" target="_blank" aria-label="Instagram" class="hover:text-white text-2xl"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@happy.asian.food" target="_blank" aria-label="TikTok" class="hover:text-white text-2xl"><i class="bi bi-tiktok"></i></a>
+        </div>
+    </div>
+
     <div class="mx-auto content-container md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="{{route('index')}}" class="hover:underline">{{ config('app.name', 'Laravel') }}</a></span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <span class="text-sm text-gray-500 sm:text-center">© 2024 <a href="{{route('index')}}" class="hover:underline">{{ config('app.name', 'Laravel') }}</a></span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
             {{-- <li>
                 <a href="#" class="hover:underline me-4 md:me-6">About</a>
             </li>

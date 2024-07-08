@@ -10,7 +10,7 @@
             </svg>
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 justify-center items-center">
                 <li>
                     <a href="#menu" class="navlink-text block py-2 px-3 md:p-0" id="scrollToMenu">Meny</a>
                 </li>
@@ -25,6 +25,13 @@
                 </li>
                 <li>
                     <a href="tel:{{ $info['phone_number']->value ?? '' }}" class="navlink-text block py-2 px-3 md:p-0"><i class="bi bi-telephone"></i> {{ $info['phone_number']->value ?? '' }}</a>
+                </li>
+                <li class="block md:hidden">
+                    <div class="py-2 px-3 md:p-0 flex justify-between space-x-8">
+                        <a href="https://www.facebook.com/profile.php?id=61558980699686" class="navlink-text" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/happyasianfood" class="navlink-text" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@happy.asian.food" class="navlink-text" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
                 </li>
             </ul>
         </div>

@@ -135,16 +135,16 @@
     <div class="bg-cover bg-fixed bg-center bg-no-repeat" style="background-image: url('{{ asset('/images/haf-hero-2.jpg') }}');">
         <div class="w-4/5 mx-auto py-12 mb-5 font-poppins">
             <h1 class="mb-4 text-2xl font-semibold leading-none tracking-tight sm:text-4xl text-center ">
-                Välkommen till <span class="font-brand">Happy Asian Food</span>
+                Välkommen till <span class="font-brand block sm:inline">Happy Asian Food</span>
             </h1>
             <p class="mb-6 text-md font-normal sm:text-2xl sm:px-16 xl:px-48 mx-5">
                 Upplev glädjen i asiatiska smaker med utsökta rätter och en varm, inbjudande atmosfär.
             </p>
-            <div class="text-center space-x-4">
-                <a href="{{ route('menu') }}" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-sm sm:text-base text-brand-color menu-button">
+            <div class="text-center space-x-2 sm:space-x-4">
+                <a href="{{ route('menu') }}" class="inline-flex items-center justify-center px-4 py-2 text-xs sm:font-medium sm:text-base text-brand-color menu-button">
                     VISA MENYN
                 </a>
-                <a href="https://order.trueorder.se/happyasianfood/store1" class="inline-flex items-center justify-center px-5 py-3 text-sm sm:text-base font-medium text-white order-button">
+                <a href="https://order.trueorder.se/happyasianfood/store1" class="inline-flex items-center justify-center px-4 py-2 text-xs sm:text-base sm:font-medium text-white order-button">
                     BESTÄLL ONLINE
                 </a>
             </div>

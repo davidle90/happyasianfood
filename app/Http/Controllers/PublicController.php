@@ -9,9 +9,6 @@ class PublicController extends Controller
     public function index()
     {
         $settings = Settings::get();
-        $menu_display_settings = $settings->where('key', 'menu_display')->first();
-
-        $menus = [];
 
         $info = [
             'monday' => $settings->where('key', 'monday')->first(),
@@ -28,6 +25,16 @@ class PublicController extends Controller
             'phone_number' => $settings->where('key', 'phone_number')->first(),
             'email' => $settings->where('key', 'email')->first(),
         ];
+
+        return view('pages.public.index', [
+            'info' => $info
+        ]);
+    }
+
+    public function menu()
+    {
+        $settings = Settings::get();
+        $menu_display_settings = $settings->where('key', 'menu_display')->first();
 
         $menus = [];
         if(isset($menu_display_settings)){
@@ -53,9 +60,8 @@ class PublicController extends Controller
             }
         }
 
-        return view('pages.public.index', [
+        return view('pages.public.menu', [
             'menus' => $menus,
-            'info' => $info
         ]);
     }
 }

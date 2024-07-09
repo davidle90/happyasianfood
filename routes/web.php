@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PublicController::class, 'index'])->name('index');
+Route::get('/meny', [PublicController::class, 'menu'])->name('menu');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

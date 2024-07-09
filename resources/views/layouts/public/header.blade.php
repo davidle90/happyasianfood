@@ -12,16 +12,13 @@
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 justify-center items-center">
                 <li>
-                    <a href="#menu" class="navlink-text block py-2 px-3 md:p-0" id="scrollToMenu">Meny</a>
+                    <a href="{{ route('index') }}" class="navlink-text block py-2 px-3 md:p-0">Hem</a>
+                </li>
+                <li>
+                    <a href="{{ route('menu') }}" class="navlink-text block py-2 px-3 md:p-0" id="scrollToMenu">Meny</a>
                 </li>
                 <li>
                     <a href="https://order.trueorder.se/happyasianfood/store1" class="navlink-text block py-2 px-3 md:p-0">Beställ online</a>
-                </li>
-                <li>
-                    <a href="#open-hours" class="navlink-text block py-2 px-3 md:p-0" id="scrollToOpenHours">Öppettider</a>
-                </li>
-                <li>
-                    <a href="#location" class="navlink-text block py-2 px-3 md:p-0" id="scrollToLocation">Hitta hit</a>
                 </li>
                 <li>
                     <a href="tel:{{ $info['phone_number']->value ?? '' }}" class="navlink-text block py-2 px-3 md:p-0"><i class="bi bi-telephone"></i> {{ $info['phone_number']->value ?? '' }}</a>
@@ -41,13 +38,13 @@
 @push('scripts')
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#scrollToMenu').click(function(event) {
-                event.preventDefault(); // Prevent the default link behavior
+            // $('#scrollToMenu').click(function(event) {
+            //     event.preventDefault(); // Prevent the default link behavior
 
-                $('html, body').animate({
-                scrollTop: $("#menu-section").offset().top
-            }, 500);
-            });
+            //     $('html, body').animate({
+            //     scrollTop: $("#menu-section").offset().top
+            // }, 500);
+            // });
             $('#scrollToOpenHours').click(function(event) {
                 event.preventDefault(); // Prevent the default link behavior
 

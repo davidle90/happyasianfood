@@ -102,15 +102,31 @@
         }
 
         #backToTopBtn:hover {
-            background-color: gold; /* Add a dark-grey background on hover */
+            background-color: goldenrod; /* Add a dark-grey background on hover */
         }
         .order-button {
-            background-color: darkgoldenrod;
-            color : white;
+            background-color: rgb(235, 47, 0);
+            color: white;
+            border: 2px solid rgb(235, 47, 0);
+            transition: .4s all;
         }
         .order-button:hover {
-            background-color: #a57809;
-            color : white;
+            background-color: rgb(235, 94, 0);
+            border: 2px solid rgb(235, 94, 0);
+            color: white;
+            transition: .4s all;
+        }
+
+        .menu-button {
+            border: 2px solid black;
+            color: black;
+            transition: .2s all;
+        }
+        .menu-button:hover {
+            background-color: rgb(235, 47, 0);
+            border: 2px solid rgb(235, 47, 0);
+            color: white;
+            transition: .2s all;
         }
 
     </style>

@@ -1,5 +1,5 @@
 <footer class="py-4 bg-gray-900">
-    <div class="mx-auto content-container text-gray-300 md:grid md:grid-cols-2 md:gap-4 py-4">
+    {{-- <div class="mx-auto content-container text-gray-300 md:grid md:grid-cols-2 md:gap-4 py-4">
         <div class="mb-10 col-span-1">
             <h1 id="open-hours-section" class="font-bold mb-2">Öppettider</h1>
             <div class="md:flex justify-start">
@@ -42,7 +42,7 @@
                 @endif
             </p>
         </div>
-    </div>
+    </div> --}}
 
     <div class="mx-auto content-container text-gray-300 mb-10">
         <h1 class="font-bold mb-2">Följ oss:</h1>

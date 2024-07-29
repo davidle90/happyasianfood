@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Davidle90\Restaurant\app\Models\Category;
 use Davidle90\Restaurant\app\Models\Meal;
 use Davidle90\Settings\app\Models\Settings;
@@ -26,8 +27,11 @@ class PublicController extends Controller
             'email' => $settings->where('key', 'email')->first(),
         ];
 
+        $post = Post::first();
+
         return view('pages.public.index', [
-            'info' => $info
+            'info' => $info,
+            'post' => $post
         ]);
     }
 

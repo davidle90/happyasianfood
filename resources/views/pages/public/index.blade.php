@@ -50,6 +50,25 @@
             padding-bottom: 12rem;
         }
 
+        .news-box {
+            position: relative;
+            border: 2px solid darkgoldenrod;
+            padding: 20px;
+            margin: 50px;
+        }
+
+        .news-box::before {
+            content: attr(data-label);
+            position: absolute;
+            top: -24px; /* Adjust based on border size and font size */
+            left: 50%;
+            transform: translateX(-50%);
+            color: darkgoldenrod;
+            background: black; /* Match the background color of your page */
+            padding: 0 24px; /* Optional padding for better appearance */
+            font-size: 26px; /* Adjust based on your preference */
+        }
+
         .open-hours-box {
             position: relative;
             border: 2px solid darkgoldenrod;
@@ -151,9 +170,21 @@
         </div>
     </div>
 
+    @if(isset($post) && !empty($post->message))
+        <div class="content-container mx-auto text-gray-300">
+            <div class="news-box" data-label="{{ $post->title ?? 'Meddelande' }}">
+                <div class="my-5 font-poppins">
+                    <p class="text-center">
+                        {{ $post->message ?? '' }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    @endif
+
     <div class="content-container mx-auto text-center text-gray-300">
         <div class="open-hours-box">
-            <div class="sm:flex justify-center my-5 sm:space-x-8">
+            <div class="sm:flex justify-center my-5 sm:space-x-8 font-poppins">
                 <p class="text-start mb-5 sm:mb-0">
                     Måndag: {{ $info['monday']->value ?? 'Stängt' }}
                     <br>
@@ -187,7 +218,7 @@
         </div>
     </div> --}}
 
-    <div class="content-container mx-auto text-center text-gray-300 mb-10">
+    <div class="content-container mx-auto text-center text-gray-300 mb-10 font-poppins">
         Vi finns på {{ $info['adress']->value ?? '' }} i {{ $info['city']->value ?? '' }}.
     </div>
 

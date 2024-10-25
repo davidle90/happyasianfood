@@ -25,7 +25,8 @@
     <script src="https://kit.fontawesome.com/0c64e32fd9.js" crossorigin="anonymous"></script>
 
     <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/tailwind.css') }}" />
 
     <!-- Flowbite JS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />

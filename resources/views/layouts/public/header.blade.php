@@ -18,17 +18,19 @@
                     <a href="{{ route('menu') }}" class="navlink-text block py-2 px-3 md:p-0" id="scrollToMenu">Meny</a>
                 </li>
                 <li>
-                    <a href="https://order.trueorder.se/happyasianfood/store1" class="navlink-text block py-2 px-3 md:p-0">Beställ online</a>
-                </li>
-                <li>
                     <a href="tel:{{ $info['phone_number']->value ?? '' }}" class="navlink-text block py-2 px-3 md:p-0"><i class="bi bi-telephone"></i> {{ $info['phone_number']->value ?? '' }}</a>
                 </li>
-                <li class="block md:hidden">
+                <li>
                     <div class="py-2 px-3 md:p-0 flex justify-between space-x-8">
                         <a href="https://www.facebook.com/profile.php?id=61558980699686" class="navlink-text" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                         <a href="https://www.instagram.com/happyasianfood" class="navlink-text" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="https://www.tiktok.com/@happy.asian.food" class="navlink-text" target="_blank" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
                     </div>
+                </li>
+                <li class="mt-5 md:mt-0">
+                    <a href="https://order.trueorder.se/happyasianfood/store1" class="font-poppins px-4 py-2 text-xs bg-red-700 hover:bg-red-800 text-white">
+                        BESTÄLL ONLINE
+                    </a>
                 </li>
             </ul>
         </div>

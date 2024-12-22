@@ -8,6 +8,7 @@
         "php": "^8.0.2",
         "davidle90/restaurant": "dev-master",
         "davidle90/settings": "dev-master",
+        "davidle90/blog": "dev-master",
         "doctrine/dbal": "^4.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
@@ -52,6 +53,13 @@
         ]
     },
     "repositories": [
+        {
+            "type":"path",
+            "url":"../packages/davidle90/blog",
+            "options":{
+                "symlink":true
+            }
+        },
         {
             "type":"path",
             "url":"../packages/davidle90/settings",

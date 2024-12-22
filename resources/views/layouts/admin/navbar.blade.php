@@ -18,6 +18,11 @@
                 </a>
             </li>
             <li>
+                <a href="{{ route('admin.blog.index')}}" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                    <span class="whitespace-nowrap"><i class="fas fa-message mr-2"></i>Meddelande</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{ route('admin.menu.index') }}" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
                     <span class="whitespace-nowrap"><i class="fas fa-utensils mr-2"></i>Meny</span>
                 </a>

@@ -10,11 +10,11 @@
         </div>
 
         <div class="text-center space-x-4">
-            <a href="{{ route('menu') }}" class="px-4 py-2 text-xs sm:text-base bg-red-700 hover:bg-red-800 text-white">
-                VISA MENYN
+            <a href="{{ route('menu') }}" class="px-4 py-2 text-xs sm:text-base uppercase border bg-yellow-400 hover:bg-yellow-500 text-white">
+                Visa meny
             </a>
-            <a href="https://order.trueorder.se/happyasianfood/store1" class="px-4 py-2 text-xs sm:text-base bg-red-700 hover:bg-red-800 text-white">
-                BESTÄLL ONLINE
+            <a href="https://order.trueorder.se/happyasianfood/store1" class="px-4 py-2 text-xs sm:text-base uppercase border bg-red-700 hover:bg-red-800 text-white">
+                Beställ online
             </a>
         </div>
     </div>

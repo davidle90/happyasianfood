@@ -45,6 +45,8 @@
         });
     </script>
 
+    @yield('cdn')
+
     @yield('styles')
     @stack('styles')
 </head>
@@ -62,8 +64,11 @@
             @include('layouts.admin.header')
         </div>
         <div class="flex">
-            <div class="grow p-5">
-                @yield('content')
+            <div class="h-screen grow flex">
+                @yield('sidebar')
+                <div class="w-full">
+                    @yield('content')
+                </div>
             </div>
         </div>
     </div>

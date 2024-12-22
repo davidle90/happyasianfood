@@ -28,8 +28,8 @@
                     </div>
                 </li>
                 <li class="mt-5 md:mt-0">
-                    <a href="https://order.trueorder.se/happyasianfood/store1" class="font-poppins px-4 py-2 text-xs bg-red-700 hover:bg-red-800 text-white">
-                        BESTÄLL ONLINE
+                    <a href="https://order.trueorder.se/happyasianfood/store1" class="font-poppins uppercase px-4 py-2 text-xs bg-red-700 hover:bg-red-800 text-white">
+                        Beställ online
                     </a>
                 </li>
             </ul>

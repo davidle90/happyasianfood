@@ -7,14 +7,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $post = Post::first();
-
-            if(!$post){
-                $post = Post::create();
-            }
-
         return view('pages.admin.index', [
-            'post' => $post
         ]);
     }
 }

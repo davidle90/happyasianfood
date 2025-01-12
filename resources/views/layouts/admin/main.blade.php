@@ -66,7 +66,7 @@
         <div class="flex">
             <div class="h-screen grow flex">
                 @yield('sidebar')
-                <div class="w-full">
+                <div class="w-full p-5">
                     @yield('content')
                 </div>
             </div>

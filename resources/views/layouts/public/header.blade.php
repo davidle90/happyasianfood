@@ -1,7 +1,7 @@
 <nav class="bg-black">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img class="h-8" src="{{ asset('/images/HappyAsianFood.png') }}" alt="happyasianfood">
+            <img class="h-8" src="https://dl-spaces.ams3.cdn.digitaloceanspaces.com/happyasianfood/images/HappyAsianFood.png" alt="happyasianfood">
             <span class="haf-font self-center text-2xl font-normal">{{ config('app.name', 'Laravel') }}</span>
         </a>
         <button data-collapse-toggle="navbar-default" type="button" class="navlink-text inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-orange-100 rounded-lg md:hidden" aria-controls="navbar-default" aria-expanded="false">

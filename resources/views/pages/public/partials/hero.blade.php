@@ -1,4 +1,4 @@
-<div class="bg-cover bg-center bg-no-repeat py-24" style="background-image: url('{{ asset('/images/haf2.jpeg') }}'); padding-top: 24px; padding-bottom: 24px;">
+<div class="bg-cover bg-center bg-no-repeat py-24" style="background-image: url('https://dl-spaces.ams3.cdn.digitaloceanspaces.com/happyasianfood/images/haf2.jpeg'); padding-top: 24px; padding-bottom: 24px;">
     <div class="w-4/5 mx-auto py-12 mb-5 font-poppins">
         <div class="text-white" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);">
             <h1 class="mb-4 text-2xl font-semibold leading-none tracking-tight sm:text-4xl text-center">

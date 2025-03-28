@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <link rel="icon" href="{{ asset('/images/HappyAsianFood.png') }}"/>
+    <link rel="icon" href="https://dl-spaces.ams3.cdn.digitaloceanspaces.com/happyasianfood/images/HappyAsianFood.png"/>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

@@ -1,5 +1,4 @@
 <div id="main-menu" class="mb-5">
-    <img class="mb-2 border-brand" src="https://dl-spaces.ams3.cdn.digitaloceanspaces.com/happyasianfood/menu/m1.jpg" alt="menu_1">
     <img class="mb-2 border-brand" src="https://dl-spaces.ams3.cdn.digitaloceanspaces.com/happyasianfood/menu/m2.jpg" alt="menu_2">
     <img class="mb-2 border-brand" src="https://dl-spaces.ams3.cdn.digitaloceanspaces.com/happyasianfood/menu/m3.jpg" alt="menu_3">
     <img class="mb-2 border-brand" src="https://dl-spaces.ams3.cdn.digitaloceanspaces.com/happyasianfood/menu/m4.jpg" alt="menu_4">
